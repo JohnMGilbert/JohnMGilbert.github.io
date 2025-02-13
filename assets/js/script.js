@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (!toggleButton) {
         console.error("Dark mode toggle button not found!");
-        return;
+        // return;
     }
 
     console.log("Dark mode button found!");
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (storedTheme === "enabled") {
         body.classList.add("dark");
-        themeStylesheet.href = "/personal-website/assets/css/dark-mode.css"; // Switch to dark theme
+        themeStylesheet.href = "/assets/css/dark-mode.css"; // Switch to dark theme
     }
 
     toggleButton.addEventListener("click", function () {
@@ -23,11 +23,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (body.classList.contains("dark")) {
             localStorage.setItem("dark-mode", "enabled");
-            themeStylesheet.href = "/personal-website/assets/css/dark-mode.css"; // Switch to dark mode
+            themeStylesheet.href = "/assets/css/dark-mode.css"; // Switch to dark mode
             console.log("Dark mode enabled!");
         } else {
             localStorage.setItem("dark-mode", "disabled");
-            themeStylesheet.href = "/personal-website/assets/css/style.css"; // Switch back to light mode
+            themeStylesheet.href = "/assets/css/style.css"; // Switch back to light mode
             console.log("Dark mode disabled!");
         }
     });

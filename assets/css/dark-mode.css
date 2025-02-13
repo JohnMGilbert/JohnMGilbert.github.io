@@ -183,11 +183,28 @@ body.dark footer {
     }
 }
 
-@media (max-width: 600px) {
-    .project-list, .hobby-list {
-        flex-direction: column;
-        align-items: center;
-    }
+
+.project-list, .hobby-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.project-item, .hobby-item {
+    background: #8c48df;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+}
+
+.project-img, .hobby-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
 }
 
 @media (width >= 600px) {
