@@ -258,28 +258,12 @@ body.dark footer {
     font-size: 20px;
     font-weight: bold;
     text-decoration: none;
-    color: white;
-    background-color: #007BFF; /* Vibrant blue */
-    padding: 12px 24px;
-    border-radius: 8px;
-    transition: background-color 0.3s ease, transform 0.1s ease-in-out;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-#game-link a:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-    transform: scale(1.05);
-}
-
-#game-link a:active {
-    background-color: #004099; /* Even darker blue on click */
-    transform: scale(0.98);
-}
-/* Dark mode styles for the game link */
-#game-link a {
     background-color: #bb86fc; /* Purple accent */
     color: black;
     box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+    padding: 12px 24px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.1s ease-in-out;
 }
 
 #game-link a:hover {
