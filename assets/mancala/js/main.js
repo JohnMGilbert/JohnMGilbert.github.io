@@ -224,26 +224,21 @@ document.querySelectorAll(".pit").forEach(pit => {
 
 
 function checkWinCondition() {
-    // Check if Player 1's side (pits 0-5) is empty
     let player1Empty = board.slice(0, 6).every(pit => pit === 0);
-    // Check if Player 2's side (pits 7-12) is empty
     let player2Empty = board.slice(7, 13).every(pit => pit === 0);
 
     if (player1Empty || player2Empty) {
-        // Move remaining stones to the respective player's store
         let player1Remaining = board.slice(0, 6).reduce((a, b) => a + b, 0);
         let player2Remaining = board.slice(7, 13).reduce((a, b) => a + b, 0);
 
-        board[6] += player1Remaining;  // Add Player 1's remaining stones to their store
-        board[13] += player2Remaining; // Add Player 2's remaining stones to their store
+        board[6] += player1Remaining;
+        board[13] += player2Remaining;
 
-        // Empty all pits
-        board.fill(0, 0, 6);  // Empty Player 1 pits (0-5)
-        board.fill(0, 7, 13); // Empty Player 2 pits (7-12)
+        board.fill(0, 0, 6);
+        board.fill(0, 7, 13);
 
         updateBoard();
 
-        // Determine the winner
         let winner;
         if (board[6] > board[13]) {
             winner = "Player 1 Wins!";
@@ -256,15 +251,19 @@ function checkWinCondition() {
         document.getElementById("game-status").innerHTML = winner;
         console.log("Game Over:", winner);
 
+        // Show "Play Again" button
+        document.getElementById("play-again").classList.remove("hidden");
+
         // Disable further clicks to prevent additional moves
         document.querySelectorAll(".pit").forEach(pit => {
             pit.removeEventListener("click", handlePitClick);
         });
 
-        return true; // Game has ended
+        return true;
     }
-    return false; // Game is still ongoing
+    return false;
 }
+
 
 
 // Attach event listeners
@@ -312,6 +311,29 @@ function updatePitPositions() {
     document.getElementById("store1").style.top = (50 * scaleFactor) + "px";
 }
 
+function resetGame() {
+    board = [4, 4, 4, 4, 4, 4, 0,  // Player 1
+             4, 4, 4, 4, 4, 4, 0]; // Player 2
+    currentPlayer = 1;
+
+    document.getElementById("game-status").innerHTML = "Player 1's Turn";
+    
+    // Hide the "Play Again" button
+    document.getElementById("play-again").classList.add("hidden");
+
+    updateBoard();
+
+    // Reattach event listeners
+    document.querySelectorAll(".pit").forEach(pit => {
+        pit.addEventListener("click", handlePitClick);
+    });
+
+    console.log("Game reset.");
+}
+
+document.getElementById("play-again").addEventListener("click", resetGame);
+
 window.onload = updatePitPositions;
 window.onresize = updatePitPositions;
+
 

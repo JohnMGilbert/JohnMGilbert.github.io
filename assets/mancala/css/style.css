@@ -158,4 +158,30 @@ body {
 }
 
 
+#play-again {
+    background-color: #28a745; /* Green */
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease-in-out;
+    display: block;
+    margin: 20px auto; /* Center the button */
+}
 
+#play-again:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+#play-again:active {
+    background-color: #1e7e34;
+    transform: scale(0.98);
+}
+
+.hidden {
+    display: none;
+}
