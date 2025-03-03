@@ -44,6 +44,13 @@ function handlePitClick(event) {
     let gameStatus = document.getElementById("game-status");
     let pit = event.target.closest(".pit"); // Ensure we're clicking a pit
 
+    // Remove any existing tooltip when clicking a pit
+    let existingTooltip = document.querySelector(".bead-tooltip");
+    if (existingTooltip) {
+        existingTooltip.remove();
+    }
+
+
     if (!pit) {
         console.error("Clicked element is not a pit.");
         return;
