@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mancala</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <h1 id="main-title">Mancala</h1>
+    <p id="game-status">Click on a pit to move stones. Player 1 goes first.</p>
+    <div id="player2-store-total" class="store-total">Player 2: 0</div>
+    <div id="board">
+        <img src="assets/mancala-board.png" id="board-image">
+        <!-- Player 1 Pits -->
+        <div class="pit" data-index="0"></div>
+        <div class="pit" data-index="1"></div>
+        <div class="pit" data-index="2"></div>
+        <div class="pit" data-index="3"></div>
+        <div class="pit" data-index="4"></div>
+        <div class="pit" data-index="5"></div>
+
+        <!-- Player Stores -->
+        <div class="store" data-index="6" id="store1"></div>
+        <div class="store" data-index="13" id="store2"></div>
+
+        <!-- Player 2 Pits -->
+        <div class="pit" data-index="7"></div>
+        <div class="pit" data-index="8"></div>
+        <div class="pit" data-index="9"></div>
+        <div class="pit" data-index="10"></div>
+        <div class="pit" data-index="11"></div>
+        <div class="pit" data-index="12"></div>
+    </div>
+    <div id="player1-store-total" class="store-total">Player 1: 0</div>
+
+    <button id="rulesButton">Show Rules</button>
+    <div id="rules" class="hidden">
+        <h2>Mancala Rules</h2>
+        <p>1. Each player has six pits filled with four stones each.</p>
+        <p>2. Players take turns picking up all stones from one of their pits and distributing them counterclockwise.
+        </p>
+        <p>3. If the last stone lands in your store, you get another turn.</p>
+        <p>4. If the last stone lands in an empty pit on your side, you capture that stone and any in the opposite pit.
+        </p>
+        <p>5. The game ends when one side is empty, and the player with the most stones in their store wins.</p>
+    </div>
+    <p id="debug"></p>
+
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
