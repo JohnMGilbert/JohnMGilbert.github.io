@@ -45,10 +45,10 @@ function handlePitClick(event) {
     let pit = event.target.closest(".pit"); // Ensure we're clicking a pit
 
     // Remove any existing tooltip when clicking a pit
-    let existingTooltip = document.querySelector(".bead-tooltip");
-    if (existingTooltip) {
-        existingTooltip.remove();
-    }
+    // let existingTooltip = document.querySelector(".bead-tooltip");
+    // if (existingTooltip) {
+    //     existingTooltip.remove();
+    // }
 
 
     if (!pit) {
@@ -210,11 +210,11 @@ function handleMouseLeave() {
     document.querySelectorAll(".pit, .store").forEach(pit => {
         pit.classList.remove("highlight", "final-highlight");
     });
-    if (event.target.tooltip) {
-        event.target.tooltip.remove();
-        event.target.tooltip = null;
-    }
+
+    // Remove all tooltips in the document
+    document.querySelectorAll(".bead-tooltip").forEach(tooltip => tooltip.remove());
 }
+
 
 // Attach event listeners to all pits
 document.querySelectorAll(".pit").forEach(pit => {
