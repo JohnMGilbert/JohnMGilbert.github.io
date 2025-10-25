@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asset and Animation Manager</title>
+    <link id="theme-stylesheet" rel="stylesheet" href="/assets/css/style.css">    
+</head>
+<body>
+    <header>
+        <h1>Asset and Animation Manager</h1>
+        <div id="header-placeholder"></div>
+    </header>
+
+    <main>
+        <section>
+            <h2>About</h2>
+            <p>
+                The Asset and Animation Manager is a custom tool built in the Godot engine designed to simplify the process of importing, organizing, and animating assets. 
+                Its primary goal is to give artists and non-programmers more control over how their assets appear and behave in-game, without needing to navigate Godot’s complex interface or rely on code. 
+                By bridging the gap between artist and programmer, the application promotes a smoother, more collaborative workflow.
+            </p>
+        </section>
+
+        <section>
+            <h2>Purpose</h2>
+            <p>
+                Many artists struggle to translate their creative intentions into functioning game assets because existing animation tools either require programming knowledge 
+                or focus too heavily on image editing rather than animation management. 
+                This project addresses those issues by offering an intuitive workspace where users can drag and drop assets, organize them visually, and export complete animation data packages directly into Godot projects.
+            </p>
+        </section>
+
+        <section>
+            <h2>Key Features</h2>
+            <ul>
+                <li><strong>Asset Importing:</strong> Drag-and-drop and directory-based importing for images and sounds.</li>
+                <li><strong>Organization Tools:</strong> Tagging, metadata editing, and search features to keep assets easily accessible.</li>
+                <li><strong>Animation Timeline:</strong> Visual drag-and-drop frame sequencing with a real-time preview window.</li>
+                <li><strong>Audio Integration:</strong> Sync sound effects to animation frames with live playback testing.</li>
+                <li><strong>Metadata Export:</strong> Generate JSON packages for seamless integration into Godot projects.</li>
+                <li><strong>User-Focused Design:</strong> Intuitive interface, minimal clutter, and responsive controls suited for hobbyists and small creative teams.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Technical Overview</h2>
+            <p>
+                The application is developed entirely within the Godot engine, ensuring compatibility with existing Godot projects. 
+                It supports PNG, MP4, and WAV formats and is designed to remain lightweight and responsive even when managing hundreds of assets. 
+                By abstracting complex animation logic into a visual editor, it allows artists to focus on creativity while maintaining technical accuracy.
+            </p>
+        </section>
+
+        <section>
+            <h2>Intended Use</h2>
+            <p>
+                The Asset and Animation Manager is meant for small, independent development teams and individual artists working on 2D games. 
+                It can be used during the asset creation phase to prepare fully configured animations before importing them into a game project, 
+                allowing programmers and artists to collaborate efficiently without technical bottlenecks.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 John Gilbert</p>
+    </footer>
+
+    <script src="/assets/js/script.js"></script>
+    <script>
+        fetch("../../header.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("header-placeholder").innerHTML = data;
+            })
+            .catch(err => console.error("Error loading header:", err));
+    </script>
+</body>
+</html>

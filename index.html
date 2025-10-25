@@ -1,37 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Persoanl Website</title>
     <link id="theme-stylesheet" rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
     <header>
-<!-- Header -->
-        <h1>Welcome</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="pages/projects.html">Projects & Hobbies</a></li>
-                <li><a href="pages/contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        <h1>John Gilbert</h1>
+        <!-- Header -->
+        <div id="header-placeholder"></div>
+        <!-- Main content -->
     </header>
-<!-- Main content -->
     <main>
         <section class="profile">
-            <img src="assets/images/profile_picture.png" class="profile-picture">
-            <p>My name is John Gilbert. I'm a computer science graduate student at NMSU. I'm also a part time game developer and contractor. In my spare time, I like to bake, play video games and pet my dog.
+            <!-- <img src="assets/images/profile_picture.png" class="profile-picture"> -->
+            <p>Hello!
+            </p>
+            <p>I'm John, a full-stack software developer and Masters student and New Mexico State University persuing my
+                degree in computer science.</p>
+            <p>Before I became a graduate student, I was a baker and part-time general contractor (handyman).
+                When a buddy of mine suggested we work on a small indie game together, I thought I'd give programming a
+                shot.
+                I quickly found a new passion in software development. Looking to get out of the more back-breaking
+                work, I decided to
+                return to school. During my degree, I've focused on Artificial Intellegence and game design. These two
+                topics of study have been complementary with each other. I've learned that if I can have
+                some form of creative expression in my work, I'm happy.
             </p>
         </section>
     </main>
-    <button id="dark-mode-toggle">Toggle Dark Mode</button>
-    <li id="game-link"><a href="assets/mancala/index.html">Try my game!</a></li>
+    <!-- <button id="dark-mode-toggle">Toggle Dark Mode</button> -->
+    <!-- <li id="game-link"><a href="assets/mancala/index.html">Try my game!</a></li> -->
     <footer>
         <p>&copy; 2025 John Gilbert</p>
     </footer>
     <script src="assets/js/script.js"></script>
 </body>
-</html>
+<script>
+    fetch("header.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("header-placeholder").innerHTML = data;
+        })
+        .catch(err => console.error("Error loading header:", err));
+</script>
 
+</html>

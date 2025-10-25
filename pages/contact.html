@@ -1,52 +1,56 @@
 <!DOCTYPE html>
 <html lang-="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Contact Me</title>
-        <link id="theme-stylesheet" rel="stylesheet" href="../assets/css/style.css">
-    </head>
-    <body>
-        <header>
-            <h1>Contact Me</h1>
-            <nav>
-                <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="projects.html">Projects & Hobbies</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
 
-        <main>
-            <section>
-                <h2>Get in Touch</h2>
-                <p>If you'd like to get in touch, contact me via email at jmgilbert23@gmail.com.
-                    Or, just fill out the form below.
-                </p>
-            </section>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link id="theme-stylesheet" rel="stylesheet" href="../assets/css/style.css">
+</head>
 
-            <section>
-                <form action="mailto:jmgilbert23@gmail.com" method="post" enctype="text/plain">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
+<body>
+    <header>
+        <h1>Contact Me</h1>
+        <div id="header-placeholder"></div>
+    </header>
 
-                    <label for="email">Email:</label>
-                    <input type="text" id="email" name="email" required>
+    <main>
+        <section>
+            <h2>Get in Touch</h2>
+            <p>If you'd like to get in touch, contact me via email at jmgilbert23@gmail.com, or fill out the form below.
+            </p>
+        </section>
 
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
+        <section>
+            <form action="mailto:jmgilbert23@gmail.com" method="post" enctype="text/plain">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
 
-                    <button type="submit">Send</button>
-                </form>
-            </section>
-        </main>
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" required>
 
-        <button id="dark-mode-toggle">Toggle Dark Mode</button>
-        <footer>
-            <p>&copy; 2025 John Gilbert</p>
-        </footer>
-        <script src="/assets/js/script.js"></script>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
 
-    </body>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- <button id="dark-mode-toggle">Toggle Dark Mode</button>
+        <footer> -->
+    <p>&copy; 2025 John Gilbert</p>
+    </footer>
+    <script src="/assets/js/script.js"></script>
+
+</body>
+<script>
+    fetch("../header.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("header-placeholder").innerHTML = data;
+        })
+        .catch(err => console.error("Error loading header:", err));
+</script>
+
 </html>

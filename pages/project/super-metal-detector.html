@@ -9,14 +9,7 @@
 <body>
     <header>
         <h1>Super Metal Detector</h1>
-        <h2>(Working Title)</h2>
-        <nav>
-            <ul>
-                <li><a href="../../index.html">Home</a></li>
-                <li><a href="../projects.html">Projects & Hobbies</a></li>
-                <li><a href="../contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        <div id="header-placeholder"></div>
     </header>
 
     <main>
@@ -43,4 +36,12 @@
 
     <script src="/assets/js/script.js"></script>
 </body>
+<script>
+    fetch("../../header.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("header-placeholder").innerHTML = data;
+        })
+        .catch(err => console.error("Error loading header:", err));
+</script>
 </html>

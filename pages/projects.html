@@ -1,42 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects & Hobbies</title>
     <link id="theme-stylesheet" rel="stylesheet" href="../assets/css/style.css">
 </head>
+
 <body>
     <header>
         <h1>Projects & Hobbies</h1>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="projects.html">Projects & Hobbies</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        <div id="header-placeholder"></div>
     </header>
 
     <main>
         <section>
-            <h2>Projects</h2>
+            <!-- <h2>Projects</h2> -->
             <div class="project-list">
+
+                <article class="project-item">
+                    <img src="/assets/images/godot_icon.png" alt="HCC Project Image" class="project-img">
+                    <h3><a href="project/hcc.html">Animation Builder for Godot</a></h3>
+                    <p>Open source tool for improving collaboration between art designers and programmers.</p>
+                </article>
+
                 <article class="project-item">
                     <img src="/assets/images/super-metal-icon.png" alt="Super Metal Detector" class="project-img">
                     <h3><a href="project/super-metal-detector.html">Super Metal Detector</a></h3>
                     <p>A video game project focused on exploration and discovery.</p>
                 </article>
 
-                <article class="project-item">
+                <!-- <article class="project-item">
                     <img src="/assets/images/multi-agent-logo.png" alt="Markov Decision Process" class="project-img">
                     <h3><a href="project/seniorProj.html">Markov Decision Process</a></h3>
                     <p>Sharing and redistributing rewards among multi-agent MDPs.</p>
-                </article>
+                </article> -->
             </div>
         </section>
 
-        <section>
+        <!-- <section>
             <h2>Hobbies</h2>
             <div class="hobby-list">
                 <article class="hobby-item">
@@ -45,10 +48,10 @@
                     <p>Exploring the art of fermentation and crafting the perfect loaf.</p>
                 </article>
             </div>
-        </section>
+        </section> -->
     </main>
 
-    <button id="dark-mode-toggle">Toggle Dark Mode</button>
+    <!-- <button id="dark-mode-toggle">Toggle Dark Mode</button> -->
 
     <footer>
         <p>&copy; 2025 Your Name</p>
@@ -56,4 +59,13 @@
 
     <script src="/assets/js/script.js"></script>
 </body>
+<script>
+    fetch("../header.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("header-placeholder").innerHTML = data;
+        })
+        .catch(err => console.error("Error loading header:", err));
+</script>
+
 </html>

@@ -9,10 +9,18 @@ body {
 
 /* header */
 header {
-    background-color: #333;
-    color: white;
-    padding: 1rem;
+    background-color: #716f6f;
+    color: #cbcbcb;
+    font-family: 'ObjectSans-Heavy', Helvetica, sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
+    /* padding: 1rem; */
     text-align: center;
+    /* font-feature-settings: "liga", "clig";
+    font-variant-ligatures: common-ligatures;
+    font-family: Rammetto One;
+    font-size: 2rem;
+    font-weight: 400; */
 }
 
 /* menu */
@@ -22,7 +30,8 @@ nav ul {
     margin: 0;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* Prevents overflow on small screens */
+    flex-wrap: wrap;
+    /* Prevents overflow on small screens */
 }
 
 nav ul li {
@@ -44,11 +53,11 @@ main {
     width: 90%;
     max-width: 800px;
     margin: 20px auto;
-    padding: 20px;
-    background: white;
+    /* padding: 20px; */
+    /* background: white; */
     /* shadows */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); */
+    /* border-radius: 8px; */
 }
 
 /* forms */
@@ -62,7 +71,8 @@ form label {
     font-weight: bold;
 }
 
-form input, form textarea {
+form input,
+form textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
@@ -117,23 +127,29 @@ footer {
 }
 
 /* project/hobby */
-.project-list, .hobby-list {
+.project-list,
+.hobby-list {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
 }
 
-.project-item, .hobby-item {
-    background: white;
+.project-item
+
+/*,
+.hobby-item */
+    {
+    background: #cbcbcb;
     padding: 15px;
-    border-radius: 8px;
+    /* border-radius: 8px; */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
     width: 300px;
 }
 
-.project-img, .hobby-img {
+.project-img,
+.hobby-img {
     width: 100%;
     height: auto;
     border-radius: 8px;
@@ -148,6 +164,7 @@ footer {
 
 /* mobile formatting */
 @media (max-width: 768px) {
+
     /* Adjust font sizes */
     body {
         font-size: 16px;
@@ -170,12 +187,14 @@ footer {
     }
 
     /* project/hobby */
-    .project-list, .hobby-list {
+    .project-list,
+    .hobby-list {
         flex-direction: column;
         align-items: center;
     }
 
-    .project-item, .hobby-item {
+    .project-item,
+    .hobby-item {
         width: 90%;
     }
 
@@ -188,6 +207,7 @@ footer {
         display: block;
         margin: 0 auto;
     }
+
     .graph {
         width: 80%;
         display: block;
@@ -225,7 +245,8 @@ footer {
     font-weight: bold;
     text-decoration: none;
     color: white;
-    background-color: #007BFF; /* Vibrant blue */
+    background-color: #007BFF;
+    /* Vibrant blue */
     padding: 12px 24px;
     border-radius: 8px;
     transition: background-color 0.3s ease, transform 0.1s ease-in-out;
@@ -233,12 +254,208 @@ footer {
 }
 
 #game-link a:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #0056b3;
+    /* Darker blue on hover */
     transform: scale(1.05);
 }
 
 #game-link a:active {
-    background-color: #004099; /* Even darker blue on click */
+    background-color: #004099;
+    /* Even darker blue on click */
     transform: scale(0.98);
 }
 
+
+
+/* NEW STUFF */
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    /* stack header, main, footer vertically */
+    min-height: 100vh;
+    /* ensure it fills the screen vertically */
+}
+
+/* Make the main content expand to fill the available space */
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Footer styling */
+footer {
+    background-color: #222;
+    color: #eee;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.icon {
+  --size: 32px;   
+  padding-bottom: 15px;                         /* icon size */
+  display: inline-block;
+  width: var(--size);
+  height: var(--size);
+
+  background-color: currentColor;          /* the color shown */
+  color: black;                            /* base color */
+
+  -webkit-mask: var(--icon) no-repeat center / contain;
+          mask: var(--icon) no-repeat center / contain;
+
+  transition: color 0.3s ease, transform 0.2s ease;
+  vertical-align: middle;
+}
+
+a:hover .icon {
+  color: #cbcbcb;                          /* hover color */
+  transform: scale(1.05);                  /* small zoom effect */
+}
+
+
+/* -------- Resume page overrides -------- */
+/* Neutralize site header/chrome */
+body.resume header {
+    background: transparent;
+    color: var(--text);
+    font-family: inherit;
+    padding: 0;
+    text-align: left;
+}
+
+/* Hide the site nav on the resume (remove if you actually want it) */
+body.resume header nav {
+    display: none;
+}
+
+/* Make the resume content a clean doc, not a card */
+body.resume main {
+    width: 100%;
+    max-width: 900px;
+    /* tweak as you like */
+    margin: 0 auto;
+    /* center the content */
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
+    flex: initial;
+    /* opt out of site’s sticky-footer expansion */
+}
+
+/* Optionally hide the site footer on the resume */
+body.resume footer {
+    display: none;
+}
+
+/* Restore normal list styling (site CSS removes bullets & centers lists) */
+body.resume section ul {
+    list-style: disc;
+    padding-left: 1.2rem;
+    text-align: left;
+}
+
+body.resume section ul li {
+    display: list-item;
+    /* undo inline-block cards */
+    margin: 4px 0;
+    /* tighten spacing for resume bullets */
+}
+
+/* Keep the resume’s own bullet lists tidy */
+body.resume ul.bullets {
+    list-style: disc;
+    margin: 6px 0 0 1.2rem;
+    padding: 0;
+}
+
+/* Use resume palette & typography */
+body.resume {
+    --text: #1b1f23;
+    --muted: #5f6b77;
+    --accent: #0a66c2;
+    --rule: #e6e8eb;
+    padding: 32px;
+    background: #fff;
+}
+
+body.resume,
+body.resume * {
+    box-sizing: border-box;
+}
+
+body.resume h1 {
+    margin: 0 0 4px;
+    font-size: 28px;
+    line-height: 1.2;
+}
+
+body.resume .contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    color: var(--muted);
+    font-weight: 500;
+}
+
+body.resume .contact a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+body.resume .section {
+    margin-top: 28px;
+}
+
+body.resume .section h2 {
+    margin: 0 0 10px;
+    font-size: 16px;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+body.resume .item {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 6px 16px;
+    padding: 14px 0;
+    border-top: 1px solid var(--rule);
+}
+
+body.resume .item:first-of-type {
+    border-top: none;
+    padding-top: 0;
+}
+
+body.resume .role {
+    font-weight: 600;
+}
+
+body.resume .org,
+body.resume .meta {
+    color: var(--muted);
+}
+
+body.resume .meta {
+    text-align: right;
+    white-space: nowrap;
+}
+
+/* Print tweaks for resume only */
+@media print {
+    body.resume {
+        padding: 0.3in;
+    }
+
+    body.resume a {
+        color: inherit;
+        text-decoration: none;
+    }
+}
