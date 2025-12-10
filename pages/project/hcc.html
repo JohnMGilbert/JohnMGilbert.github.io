@@ -14,16 +14,12 @@
 
     <main>
         <section>
-            <h2>About</h2>
+            <h2>Description &amp; Motivation</h2>
             <p>
                 The Asset and Animation Manager is a custom tool built in the Godot engine designed to simplify the process of importing, organizing, and animating assets. 
                 Its primary goal is to give artists and non-programmers more control over how their assets appear and behave in-game, without needing to navigate Godot’s complex interface or rely on code. 
                 By bridging the gap between artist and programmer, the application promotes a smoother, more collaborative workflow.
             </p>
-        </section>
-
-        <section>
-            <h2>Purpose</h2>
             <p>
                 Many artists struggle to translate their creative intentions into functioning game assets because existing animation tools either require programming knowledge 
                 or focus too heavily on image editing rather than animation management. 
@@ -38,7 +34,7 @@
                 <li><strong>Organization Tools:</strong> Tagging, metadata editing, and search features to keep assets easily accessible.</li>
                 <li><strong>Animation Timeline:</strong> Visual drag-and-drop frame sequencing with a real-time preview window.</li>
                 <li><strong>Audio Integration:</strong> Sync sound effects to animation frames with live playback testing.</li>
-                <li><strong>Metadata Export:</strong> Generate JSON packages for seamless integration into Godot projects.</li>
+                <li><strong>Metadata Export:</strong> Generate JSON (JavaScript Object Notation) packages for seamless integration into Godot projects.</li>
                 <li><strong>User-Focused Design:</strong> Intuitive interface, minimal clutter, and responsive controls suited for hobbyists and small creative teams.</li>
             </ul>
         </section>
@@ -47,7 +43,7 @@
             <h2>Technical Overview</h2>
             <p>
                 The application is developed entirely within the Godot engine, ensuring compatibility with existing Godot projects. 
-                It supports PNG, MP4, and WAV formats and is designed to remain lightweight and responsive even when managing hundreds of assets. 
+                It supports PNG (Portable Network Graphics), MP4 (MPEG-4 Part 14), and WAV (Waveform Audio File Format) formats and is designed to remain lightweight and responsive even when managing hundreds of assets. 
                 By abstracting complex animation logic into a visual editor, it allows artists to focus on creativity while maintaining technical accuracy.
             </p>
         </section>
@@ -59,6 +55,97 @@
                 It can be used during the asset creation phase to prepare fully configured animations before importing them into a game project, 
                 allowing programmers and artists to collaborate efficiently without technical bottlenecks.
             </p>
+        </section>
+
+        <section>
+            <h2>Online Study &amp; Prototyping Phase</h2>
+            <p>
+                The project followed a user-centered design process beginning with an early prototype and online-style feedback sessions. 
+                An initial low-fidelity interface was created to explore the basic workflow: creating a project, importing sprites, building an animation, and exporting it.
+            </p>
+            <p>
+                Participants completed three core tasks while I observed their actions and collected questionnaire responses:
+            </p>
+            <ul>
+                <li>Create a new project and bring an asset into the scene.</li>
+                <li>Link the project to a Godot repository.</li>
+                <li>Export a packaged animation sequence.</li>
+            </ul>
+            <p>
+                These early sessions highlighted confusion around where to drag sprites, how export and repository linking worked, and which stage of the process the user was currently in. 
+                This feedback directly informed the design of the higher-fidelity prototypes and the layout of the main interface.
+            </p>
+        </section>
+
+        <section>
+            <h2>User Study 1 Results</h2>
+            <p>
+                User Study 1 evaluated the early prototype with six participants ranging from novice users to experienced animators. 
+                Each participant completed the three core tasks while I recorded task time, clarifying questions, and interaction patterns. 
+                Afterward, they completed a questionnaire using 10 Likert-scale items (1 = strongly disagree, 5 = strongly agree) focused on layout clarity, import and export understanding, workflow logic, and overall approachability.
+            </p>
+            <p>
+                On average, participants rated the tool around 3.7 out of 5 overall. 
+                They generally found the layout and number of controls manageable, but reported confusion about:
+            </p>
+            <ul>
+                <li>Where to drop sprites when building an animation.</li>
+                <li>What the export step would produce and where it would go in Godot.</li>
+                <li>Which stage of the process they were currently in.</li>
+            </ul>
+            <p>
+                Open-ended responses requested clearer visual cues (such as drop targets and signals), simple tutorials or tooltips, and more feedback about what actions were possible at each step.
+            </p>
+        </section>
+
+        <section>
+            <h2>User Study 2 Results</h2>
+            <p>
+                User Study 2 was conducted on a functional Godot-based version of the Asset and Animation Manager after incorporating findings from User Study 1. 
+                The same three tasks and questionnaire were reused to make comparison possible, and again six participants with varied experience levels were observed.
+            </p>
+            <p>
+                The overall average rating stayed around 3.7 out of 5, but the pattern of responses shifted. 
+                Participants reported that the workflow felt more coherent and that it was easier to move from importing sprites to exporting a complete animation. 
+                Task completion became more consistent: all participants successfully completed all three tasks, and export actions in particular became very fast and direct.
+            </p>
+            <p>
+                Remaining issues appeared mostly at the “polish” level. 
+                Novice users sometimes still needed stronger guidance about what the preview window represented or where to start when dragging sprites. 
+                Participants suggested clearer section labels (for example “Frame Builder” and “Preview”), highlighting the currently selected frame, zoom controls, and small onboarding aids such as an introductory popup or a help icon.
+            </p>
+        </section>
+
+        <section>
+            <h2>Iterative Design &amp; Takeaways</h2>
+            <p>
+                Comparing User Studies 1 and 2 shows how the design evolved in response to real user data. 
+                Early pain points around drag-and-drop, export behavior, and workflow visibility led to changes in layout, stronger visual cues, clearer tab naming, and a more structured build-versus-export separation.
+            </p>
+            <p>
+                By the second study, participants spent less time asking “How do I use this?” and more time suggesting enhancements such as keyboard shortcuts, better frame control, and advanced navigation features. 
+                This shift indicates that the core interaction model has become understandable, leaving room for the tool to grow into a more powerful production-ready system.
+            </p>
+        </section>
+
+        <section>
+            <h2>Demo</h2>
+            <p>
+                Below is a short visual demo of the Asset and Animation Manager, showing the process of importing sprites, assembling an animation, and previewing the result inside the tool.
+            </p>
+
+            <!-- Replace these src paths with your actual files -->
+            <figure>
+                <img src="/assets/img/aam-builder-demo.gif" alt="Animation Manager builder workflow demo">
+                <figcaption>Building an animation sequence using drag-and-drop in the builder grid.</figcaption>
+            </figure>
+
+            <figure>
+                <video controls src="/assets/video/aam-full-workflow.mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <figcaption>Short video walkthrough of the full workflow: new project, import, build, and export.</figcaption>
+            </figure>
         </section>
     </main>
 
