@@ -459,3 +459,20 @@ body.resume .meta {
         text-decoration: none;
     }
 }
+
+/* -------- Animation Manager Page List Overrides -------- */
+
+body.aam-page section ul {
+    list-style: disc;             /* restore bullets */
+    padding-left: 1.5rem;         /* space on the left */
+    text-align: left;             /* left-align bullets/text */
+}
+
+body.aam-page section ul li {
+    display: list-item;           /* undo inline-block */
+    margin: 6px 0;                /* normal list spacing */
+}
+
+body.aam-page section ul {
+    line-height: 1.5;
+}
