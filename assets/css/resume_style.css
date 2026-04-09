@@ -1,160 +1,179 @@
-/* reset / base */
+:root {
+    --page-bg: #eef2f7;
+    --sheet-bg: #ffffff;
+    --text: #1f2933;
+    --muted: #5b6777;
+    --line: #d7dee7;
+    --accent: #1d5f8c;
+    --accent-soft: #edf5fb;
+}
+
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 html {
-    height: 100%;
+    min-height: 100%;
 }
 
 body {
     min-height: 100%;
-    background: #eee;
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    color: #222;
-    font-size: 14px;
-    line-height: 26px;
-    padding-bottom: 50px;
+    background: linear-gradient(180deg, #f5f7fa 0%, var(--page-bg) 100%);
+    color: var(--text);
+    font-family: "Aptos", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.55;
+    padding: 32px 16px 48px;
 }
 
-/* layout */
-.container {
-    max-width: 700px;
-    background: #fff;
-    margin: 50px auto 0;
-    box-shadow: 1px 1px 2px #DAD7D7;
-    border-radius: 3px;
+a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+a:hover,
+a:focus-visible {
+    text-decoration: underline;
+}
+
+.resume {
+    max-width: 900px;
+    margin: 0 auto;
+    background: var(--sheet-bg);
+    border: 1px solid rgba(29, 95, 140, 0.12);
+    border-radius: 20px;
+    box-shadow: 0 24px 60px rgba(21, 34, 50, 0.08);
     padding: 40px;
 }
 
-/* header block */
-.header {
-    margin-bottom: 30px;
+.resume-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 24px;
+    align-items: start;
+    padding-bottom: 28px;
+    border-bottom: 2px solid var(--line);
 }
 
-.header .full-name {
-    font-size: 40px;
-    text-transform: uppercase;
-    margin-bottom: 5px;
-}
-
-.header .first-name {
+.eyebrow {
+    color: var(--accent);
+    font-size: 0.78rem;
     font-weight: 700;
-}
-
-.header .last-name {
-    font-weight: 300;
-}
-
-.header .contact-info {
-    margin-bottom: 20px;
-}
-
-.header .email,
-.header .phone {
-    color: #999;
-    font-weight: 300;
-}
-
-.header .separator {
-    height: 10px;
-    display: inline-block;
-    border-left: 2px solid #999;
-    margin: 0 10px;
-}
-
-.header .position {
-    font-weight: bold;
-    display: inline-block;
-    margin-right: 10px;
-    text-decoration: underline;
-}
-
-/* details sections */
-.details {
-    line-height: 20px;
-}
-
-.details .section {
-    margin-bottom: 40px;
-}
-
-.details .section:last-of-type {
-    margin-bottom: 0;
-}
-
-.details .section__title {
-    letter-spacing: 2px;
-    color: #54AFE4;
-    font-weight: bold;
+    letter-spacing: 0.16em;
     margin-bottom: 10px;
     text-transform: uppercase;
 }
 
-.details .section__list-item {
-    margin-bottom: 40px;
+.resume-header h1 {
+    font-size: clamp(2.1rem, 4vw, 3rem);
+    line-height: 1.05;
+    margin-bottom: 14px;
 }
 
-.details .section__list-item:last-of-type {
-    margin-bottom: 0;
+.summary {
+    color: var(--muted);
+    max-width: 62ch;
 }
 
-.details .left,
-.details .right {
-    vertical-align: top;
-    display: inline-block;
-}
-
-.details .left {
-    width: 60%;
-}
-
-.details .right {
-    width: 39%;
+.contact-list {
+    list-style: none;
+    display: grid;
+    gap: 10px;
+    font-size: 0.98rem;
     text-align: right;
 }
 
-.details .name {
-    font-weight: bold;
+.resume-section {
+    padding-top: 28px;
 }
 
-.details a {
-    text-decoration: none;
-    color: #000;
-    font-style: italic;
+.resume-section h2 {
+    color: var(--accent);
+    font-size: 0.95rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    margin-bottom: 18px;
+    text-transform: uppercase;
 }
 
-.details a:hover {
-    text-decoration: underline;
-    color: #000;
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px 18px;
 }
 
-/* skills */
-.details .skills {
-    /* container hook if needed */
+.skills-grid p {
+    background: var(--accent-soft);
+    border: 1px solid rgba(29, 95, 140, 0.12);
+    border-radius: 14px;
+    padding: 14px 16px;
 }
 
-.details .skills__item {
+.entry + .entry {
+    margin-top: 22px;
+}
+
+.entry-heading {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 16px;
+    align-items: baseline;
     margin-bottom: 10px;
 }
 
-.details .skills__item .right input {
-    display: none;
+.entry h3 {
+    font-size: 1.08rem;
+    line-height: 1.25;
 }
 
-.details .skills__item .right label {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    background: #C3DEF3;
-    border-radius: 20px;
-    margin-right: 3px;
-    vertical-align: middle;
+.entry-subtitle,
+.entry-date,
+.education-detail {
+    color: var(--muted);
 }
 
-.details .skills__item .right input:checked+label {
-    background: #79A9CE;
+.entry ul {
+    padding-left: 20px;
+}
+
+.entry li + li {
+    margin-top: 8px;
+}
+
+.education-detail {
+    margin-top: 4px;
+}
+
+@media (max-width: 760px) {
+    .resume {
+        padding: 24px;
+        border-radius: 16px;
+    }
+
+    .resume-header,
+    .entry-heading,
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-list {
+        text-align: left;
+    }
+}
+
+@media print {
+    body {
+        background: #fff;
+        padding: 0;
+    }
+
+    .resume {
+        max-width: none;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+        margin: 0;
+        padding: 0;
+    }
 }

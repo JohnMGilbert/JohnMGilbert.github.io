@@ -3,304 +3,167 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>John Gilbert — Resume</title>
-  <link href="https://fonts.googleapis.com/css?family=Lato:400,300,700" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="Resume for John Gilbert, software developer and computer science master's student.">
+  <title>John Gilbert | Resume</title>
   <link rel="stylesheet" href="/assets/css/resume_style.css">
 </head>
 
-<body>
-
-  <div class="container">
-    <div class="header">
-      <div class="full-name">
-        <span class="first-name">John</span>
-        <span class="last-name">Gilbert</span>
+<body class="resume-page">
+  <main class="resume">
+    <header class="resume-header">
+      <div class="resume-header__main">
+        <p class="eyebrow">Software Developer</p>
+        <h1>John Gilbert</h1>
+        <p class="summary">
+          Software developer and computer science master's student building full-stack applications, creative tools,
+          and game systems. Brings a practical background in AI evaluation, user-centered design, and
+          cross-disciplinary collaboration, with a strong interest in software that helps people create and explore.
+        </p>
       </div>
-      <div class="contact-info">
-        <span class="email">Email: </span>
-        <span class="email-val">jmgilbert23@gmail.com</span>
-        <span class="separator"></span>
-        <span class="phone">Phone: </span>
-        <span class="phone-val">575-405-3364</span>
+
+      <ul class="contact-list" aria-label="Contact information">
+        <li><a href="mailto:jmgilbert23@gmail.com">jmgilbert23@gmail.com</a></li>
+        <li><a href="tel:15754053364">575-405-3364</a></li>
+        <li><a href="https://johnmgilbert.github.io">johnmgilbert.github.io</a></li>
+        <li>Las Cruces, New Mexico</li>
+      </ul>
+    </header>
+
+    <section class="resume-section">
+      <h2>Technical Skills</h2>
+      <div class="skills-grid">
+        <p><strong>Languages:</strong> Python, JavaScript, C, C++, GDScript, HTML, CSS</p>
+        <p><strong>Tools &amp; Platforms:</strong> Godot, Git, JSON, Web UI prototyping</p>
+        <p><strong>Focus Areas:</strong> Full-stack development, game development, AI data evaluation</p>
+        <p><strong>Methods:</strong> User research, iterative prototyping, workflow design, content moderation</p>
       </div>
-      <div class="about">
-        <span class="position">Software Developer </span>
-        <span class="desc">
-          As a software and game developer, I focus on creating meaningful, engaging experiences through technology.
-          Currently pursuing a Master’s in Computer Science, I’m driven by curiosity and the challenge of translating
-          creative ideas into functional, user-friendly software.
-        </span>
-      </div>
-    </div>
+    </section>
 
-    <div class="details">
-      <div class="section">
-        <div class="section__title">Experience</div>
-        <div class="section__list">
-          <div class="section__list-item">
-            <div class="left">
-              <div class="name">Telus International</div>
-              <div class="addr">Remote</div>
-              <div class="duration">Aug 2022 - Current</div>
-            </div>
-            <div class="right">
-              <div class="name">Internet Safety Evaluation</div>
-              <div class="desc">AI training, data analysis, moderation</div>
-            </div>
-          </div>
-          <div class="section__list-item">
-            <div class="left">
-              <div class="name">Freelance</div>
-              <div class="addr">Las Cruces, NM</div>
-              <div class="duration">Jan 2023 - Current</div>
-            </div>
-            <div class="right">
-              <div class="name">Contractor</div>
-              <div class="desc">Home renovations, landscaping, handyman work</div>
-            </div>
-          </div>
+    <section class="resume-section">
+      <h2>Selected Projects</h2>
 
-          <div class="section__list-item">
-            <div class="left">
-              <div class="name">Bakehouse LLC</div>
-              <div class="addr">Las Cruces, NM</div>
-              <div class="duration">Jan 2013 - Jun 2018</div>
-            </div>
-            <div class="right">
-              <div class="name">Person in Charge</div>
-              <div class="desc">Employee management, food prep, baking, catering</div>
-            </div>
+      <article class="entry">
+        <div class="entry-heading">
+          <div>
+            <h3>Animation Builder for Godot</h3>
+            <p class="entry-subtitle">Creative tooling project</p>
           </div>
-
+          <a href="/pages/project/hcc.html">Project page</a>
         </div>
-      </div>
-      <div class="section">
-        <div class="section__title">Education</div>
-        <div class="section__list">
-          <div class="section__list-item">
-            <div class="left">
-              <div class="name">New Mexico State University</div>
-              <div class="addr">Las Cruces, NM </div>
-              <div class="duration">Aug 2021 - May 2024</div>
-            </div>
-            <div class="right">
-              <div class="name">B.S Computer Science</div>
-              <div class="desc">GPA: 3.9</div>
-            </div>
-          </div>
-          <div class="section__list-item">
-            <div class="left">
-              <div class="name">New Mexico State University</div>
-              <div class="addr">Las Cruces, NM</div>
-              <div class="duration">Aug 2024 - Expected May 2026</div>
-            </div>
-            <div class="right">
-              <div class="name">M.S Computer Science</div>
-              <div class="desc">GPA: TDB (Current 4.0)</div>
-            </div>
-          </div>
+        <ul>
+          <li>Built a Godot-based asset and animation management tool to help artists and non-programmers create game-ready animations with a clearer visual workflow.</li>
+          <li>Implemented drag-and-drop importing, metadata organization, timeline-based frame sequencing, audio synchronization, and JSON export for downstream Godot integration.</li>
+          <li>Ran two rounds of user studies with six participants each and used the feedback to improve layout clarity, export understanding, and task completion consistency.</li>
+        </ul>
+      </article>
 
+      <article class="entry">
+        <div class="entry-heading">
+          <div>
+            <h3>Food Waste Reducer AI</h3>
+            <p class="entry-subtitle">Research project</p>
+          </div>
+          <a href="/pages/project/seniorProj.html">Project page</a>
         </div>
+        <ul>
+          <li>Developed a proof-of-concept approach for reducing household perishable food waste through decentralized decision systems.</li>
+          <li>Explored reward sharing across item-level Markov Decision Processes combined with Monte Carlo Tree Search to model realistic pantry planning behavior.</li>
+          <li>Used repeated simulation results to evaluate how shared rewards could lower waste while preserving practical household constraints.</li>
+        </ul>
+      </article>
 
-      </div>
-      <!-- <div class="section">
-      <div class="section__title">Projects</div> 
-       <div class="section__list">
-         <div class="section__list-item">
-           <div class="name">DSP</div>
-           <div class="text">I am a front-end developer with more than 3 years of experience writing html, css, and js. I'm motivated, result-focused and seeking a successful team-oriented company with opportunity to grow.</div>
-         </div>
-         
-         <div class="section__list-item">
-                    <div class="name">DSP</div>
-           <div class="text">I am a front-end developer with more than 3 years of experience writing html, css, and js. I'm motivated, result-focused and seeking a successful team-oriented company with opportunity to grow. <a href="/login">link</a>
-           </div>
-         </div>
-       </div>
-    </div> -->
-      <div class="section">
-        <div class="section__title">Skills</div>
-        <div class="skills">
-          <div class="skills__item">
-            <div class="left">
-              <div class="name">
-                Python
-              </div>
-            </div>
-            <div class="right">
-              <input id="ck1" type="checkbox" checked />
-              <label for="ck1"></label>
-
-              <input id="ck2" type="checkbox" checked />
-              <label for="ck2"></label>
-
-              <input id="ck3" type="checkbox" checked />
-              <label for="ck3"></label>
-
-              <input id="ck4" type="checkbox" checked />
-              <label for="ck4"></label>
-
-              <input id="ck5" type="checkbox" />
-              <label for="ck5"></label>
-
-            </div>
+      <article class="entry">
+        <div class="entry-heading">
+          <div>
+            <h3>Super Metal Detector</h3>
+            <p class="entry-subtitle">Indie game collaboration</p>
           </div>
+          <a href="/pages/project/super-metal-detector.html">Project page</a>
         </div>
+        <ul>
+          <li>Co-developing an exploration and rhythm game with a longtime creative collaborator, translating ideas into playable systems and world-building prototypes.</li>
+          <li>Contributing gameplay direction, technical implementation, and iterative development support as the project moves from concept toward a stronger vertical slice.</li>
+        </ul>
+      </article>
+    </section>
 
-        <div class="skills__item">
-          <div class="left">
-            <div class="name">
-              Javascript</div>
+    <section class="resume-section">
+      <h2>Experience</h2>
+
+      <article class="entry">
+        <div class="entry-heading">
+          <div>
+            <h3>TELUS International</h3>
+            <p class="entry-subtitle">Internet Safety Evaluator | Remote</p>
           </div>
-          <div class="right">
-            <input id="ck1" type="checkbox" checked />
-
-            <label for="ck1"></label>
-            <input id="ck2" type="checkbox" checked />
-
-            <label for="ck2"></label>
-            <input id="ck3" type="checkbox" checked/>
-
-            <label for="ck3"></label>
-            <input id="ck4" type="checkbox" checked/>
-            <label for="ck4"></label>
-            <input id="ck5" type="checkbox" />
-            <label for="ck5"></label>
-
-          </div>
+          <p class="entry-date">Aug 2022 - Present</p>
         </div>
+        <ul>
+          <li>Evaluate online content against safety and quality guidelines to support moderation, trust and safety, and AI-related data workflows.</li>
+          <li>Apply consistent judgment in high-volume review environments where policies and edge cases change over time.</li>
+          <li>Strengthen analytical accuracy and attention to detail through independent review, policy interpretation, and documentation-focused work.</li>
+        </ul>
+      </article>
 
-        <div class="skills__item">
-          <div class="left">
-            <div class="name">
-              CSS
-            </div>
+      <article class="entry">
+        <div class="entry-heading">
+          <div>
+            <h3>Freelance Contractor</h3>
+            <p class="entry-subtitle">Residential projects | Las Cruces, NM</p>
           </div>
-          <div class="right">
-            <input id="ck1" type="checkbox" checked />
-            <label for="ck1"></label>
-
-            <input id="ck2" type="checkbox" checked />
-            <label for="ck2"></label>
-
-            <input id="ck3" type="checkbox" checked/>
-            <label for="ck3"></label>
-
-            <input id="ck4" type="checkbox" />
-            <label for="ck4"></label>
-
-            <input id="ck5" type="checkbox" />
-            <label for="ck5"></label>
-
-          </div>
+          <p class="entry-date">Jan 2023 - Present</p>
         </div>
+        <ul>
+          <li>Manage small client projects including home repairs, renovation support, landscaping, and general handyman work.</li>
+          <li>Coordinate project scope, materials, scheduling, and execution while working independently and maintaining client trust.</li>
+          <li>Bring practical problem-solving, adaptability, and craftsmanship to projects with changing requirements and real-world constraints.</li>
+        </ul>
+      </article>
 
-        <div class="skills__item">
-          <div class="left">
-            <div class="name">
-              C</div>
+      <article class="entry">
+        <div class="entry-heading">
+          <div>
+            <h3>Bakehouse LLC</h3>
+            <p class="entry-subtitle">Person in Charge | Las Cruces, NM</p>
           </div>
-          <div class="right">
-            <input id="ck1" type="checkbox" checked />
-
-            <label for="ck1"></label>
-            <input id="ck2" type="checkbox" checked />
-
-            <label for="ck2"></label>
-            <input id="ck3" type="checkbox" checked/>
-
-            <label for="ck3"></label>
-            <input id="ck4" type="checkbox" checked/>
-            <label for="ck4"></label>
-            <input id="ck5" type="checkbox" />
-            <label for="ck5"></label>
-
-          </div>
+          <p class="entry-date">Jan 2013 - Jun 2018</p>
         </div>
+        <ul>
+          <li>Oversaw daily bakery operations, food preparation, and catering support in a fast-paced production environment.</li>
+          <li>Supervised employees, helped coordinate workflow, and maintained quality and consistency under deadline-driven conditions.</li>
+          <li>Built leadership, training, and communication skills that continue to shape a calm and reliable approach to team-based work.</li>
+        </ul>
+      </article>
+    </section>
 
-        <div class="skills__item">
-          <div class="left">
-            <div class="name">
-              C++</div>
+    <section class="resume-section">
+      <h2>Education</h2>
+
+      <article class="entry">
+        <div class="entry-heading">
+          <div>
+            <h3>New Mexico State University</h3>
+            <p class="entry-subtitle">M.S. in Computer Science</p>
           </div>
-          <div class="right">
-            <input id="ck1" type="checkbox" checked />
-
-            <label for="ck1"></label>
-            <input id="ck2" type="checkbox" checked />
-
-            <label for="ck2"></label>
-            <input id="ck3" type="checkbox" />
-
-            <label for="ck3"></label>
-            <input id="ck4" type="checkbox" />
-            <label for="ck4"></label>
-            <input id="ck5" type="checkbox" />
-            <label for="ck5"></label>
-
-          </div>
+          <p class="entry-date">Aug 2024 - Expected May 2026</p>
         </div>
+        <p class="education-detail">Current GPA: 4.0</p>
+      </article>
 
-        <div class="skills__item">
-          <div class="left">
-            <div class="name">
-              GDScript</div>
+      <article class="entry">
+        <div class="entry-heading">
+          <div>
+            <h3>New Mexico State University</h3>
+            <p class="entry-subtitle">B.S. in Computer Science</p>
           </div>
-          <div class="right">
-            <input id="ck1" type="checkbox" checked />
-
-            <label for="ck1"></label>
-            <input id="ck2" type="checkbox" checked />
-
-            <label for="ck2"></label>
-            <input id="ck3" type="checkbox" checked/>
-
-            <label for="ck3"></label>
-            <input id="ck4" type="checkbox" checked/>
-            <label for="ck4"></label>
-            <input id="ck5" type="checkbox" />
-            <label for="ck5"></label>
-
-          </div>
+          <p class="entry-date">Aug 2021 - May 2024</p>
         </div>
+        <p class="education-detail">GPA: 3.9</p>
+      </article>
+    </section>
+  </main>
+</body>
 
-        <!-- <div class="skills__item">
-          <div class="left">
-            <div class="name">
-              Javascript</div>
-          </div>
-          <div class="right">
-            <input id="ck1" type="checkbox" checked />
-
-            <label for="ck1"></label>
-            <input id="ck2" type="checkbox" checked />
-
-            <label for="ck2"></label>
-            <input id="ck3" type="checkbox" checked/>
-
-            <label for="ck3"></label>
-            <input id="ck4" type="checkbox" checked/>
-            <label for="ck4"></label>
-            <input id="ck5" type="checkbox" />
-            <label for="ck5"></label>
-
-          </div>
-        </div> -->
-
-      <!-- </div> -->
-
-    </div>
-    <!-- <div class="section">
-      <div class="section__title">
-        Interests
-      </div>
-      <div class="section__list">
-        <div class="section__list-item">
-          Football, programming.
-        </div>
-      </div>
-    </div> -->
-  </div>
-  </div>
-  </div>
+</html>
