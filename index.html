@@ -4,49 +4,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>John Gilbert</title>
-    <link id="theme-stylesheet" rel="stylesheet" href="assets/css/style.css">
+    <meta name="description"
+        content="John Gilbert is a software developer and computer science master's student building tools, games, and thoughtful digital experiences.">
+    <title>John Gilbert | Software Developer</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body>
-    <header>
-        <h1>John Gilbert</h1>
-        <!-- Header -->
+<body class="home-page">
+    <header class="page-header">
+        <p class="eyebrow">Software developer / Game builder / Graduate student</p>
+        <h1>Designing practical software with a creative streak.</h1>
+        <p class="page-lead">
+            I'm John Gilbert, a full-stack developer pursuing a master's in computer science at New Mexico State
+            University. I like building tools that feel useful, approachable, and a little bit playful.
+        </p>
         <div id="header-placeholder"></div>
-        <!-- Main content -->
     </header>
-    <main>
-        <section class="profile">
-            <!-- <img src="assets/images/profile_picture.png" class="profile-picture"> -->
-            <p>Hello!
-            </p>
-            <p>I'm John, a full-stack software developer and Masters student and New Mexico State University persuing my
-                degree in computer science.</p>
-            <p>Before I became a graduate student, I was a baker and part-time general contractor (handyman).
-                When a buddy of mine suggested we work on a small indie game together, I thought I'd give programming a
-                shot.
-                I quickly found a new passion in software development. Looking to get out of the more back-breaking
-                work, I decided to
-                return to school. During my degree, I've focused on Artificial Intellegence and game design. These two
-                topics of study have been complementary with each other. I've learned that if I can have
-                some form of creative expression in my work, I'm happy.
-            </p>
+
+    <main class="page-shell">
+        <section class="hero">
+            <div class="hero-copy">
+                <p class="eyebrow">What I'm focused on</p>
+                <h2>AI, game development, and software that helps people make things.</h2>
+                <p>
+                    I came to tech from baking and hands-on contractor work, which still shapes how I approach
+                    software. I care about craft, clear feedback, and building things that hold up in the real world.
+                </p>
+                <div class="button-row">
+                    <a class="button-link primary" href="/pages/projects.html">See my projects</a>
+                    <a class="button-link secondary" href="/pages/contact.html">Start a conversation</a>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="profile-frame">
+                    <img src="assets/images/profile_picture.png" alt="Portrait of John Gilbert" class="profile-picture">
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="section-heading">
+                <p class="eyebrow">Snapshot</p>
+                <h2>Grounded in making, not just theory.</h2>
+                <p>
+                    My background has been a mix of physical work, creative collaboration, and technical research.
+                    That combination keeps me practical while still pushing toward ambitious ideas.
+                </p>
+            </div>
+            <div class="stat-grid">
+                <article class="stat-card">
+                    <strong>M.S.</strong>
+                    <span>Computer Science at New Mexico State University</span>
+                </article>
+                <article class="stat-card">
+                    <strong>3 lanes</strong>
+                    <span>Full-stack development, game design, and AI-focused experimentation</span>
+                </article>
+                <article class="stat-card">
+                    <strong>People-first</strong>
+                    <span>Tools built to be clear for artists, teammates, and end users</span>
+                </article>
+            </div>
+        </section>
+
+        <section>
+            <div class="section-heading">
+                <p class="eyebrow">Selected work</p>
+                <h2>Projects that show how I think.</h2>
+                <p>
+                    I'm most energized by projects where technical systems support creativity, whether that means
+                    empowering artists, prototyping games, or exploring smarter decision-making models.
+                </p>
+            </div>
+            <div class="project-list">
+                <article class="project-item">
+                    <img src="/assets/images/godot_icon.png" alt="Godot project icon" class="project-img">
+                    <div>
+                        <h3><a href="/pages/project/hcc.html">Animation Builder for Godot</a></h3>
+                        <p>
+                            A Godot-based asset and animation manager built to make collaboration easier between
+                            artists and programmers.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="project-item">
+                    <img src="/assets/images/super-metal-icon.png" alt="Super Metal Detector icon" class="project-img">
+                    <div>
+                        <h3><a href="/pages/project/super-metal-detector.html">Super Metal Detector</a></h3>
+                        <p>
+                            An indie game project centered on exploration, rhythm, and building a strange little world
+                            with a longtime friend.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section>
+            <div class="section-heading">
+                <p class="eyebrow">How I work</p>
+                <h2>Creative systems, clear communication, steady iteration.</h2>
+            </div>
+            <div class="story-grid">
+                <article class="story-card">
+                    <h3>Built from an unconventional path</h3>
+                    <p>
+                        Before graduate school, I worked as a baker and handyman. That experience made me value
+                        reliability, repetition, and the satisfaction of making something tangible.
+                    </p>
+                </article>
+                <article class="story-card">
+                    <h3>Interested in software that supports people</h3>
+                    <p>
+                        I'm especially drawn to interfaces and workflows that reduce friction for creative teams,
+                        students, and independent builders.
+                    </p>
+                </article>
+            </div>
+            <ul class="chip-list" aria-label="Core interests">
+                <li>Artificial intelligence</li>
+                <li>Game systems</li>
+                <li>User-centered design</li>
+                <li>Collaborative tools</li>
+                <li>Rapid prototyping</li>
+            </ul>
+        </section>
+
+        <section>
+            <div class="section-heading">
+                <p class="eyebrow">Journey</p>
+                <h2>From hands-on trades to software development.</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <strong>Baker and contractor</strong>
+                    <p>
+                        Years of physical, detail-oriented work taught me discipline, patience, and how to build with
+                        care.
+                    </p>
+                </div>
+                <div class="timeline-item">
+                    <strong>Started programming through game development</strong>
+                    <p>
+                        A small indie game project turned into a new direction and eventually a deeper commitment to
+                        software engineering.
+                    </p>
+                </div>
+                <div class="timeline-item">
+                    <strong>Now pursuing deeper technical work</strong>
+                    <p>
+                        My current focus is combining AI research, full-stack development, and creative tooling into
+                        work that feels both useful and expressive.
+                    </p>
+                </div>
+            </div>
         </section>
     </main>
-    <!-- <button id="dark-mode-toggle">Toggle Dark Mode</button> -->
-    <!-- <li id="game-link"><a href="assets/mancala/index.html">Try my game!</a></li> -->
+
     <footer>
-        <p>&copy; 2025 John Gilbert</p>
+        <p class="footer-copy">&copy; <span id="footer-year">2026</span> John Gilbert. Built with HTML, CSS, and a lot of iteration.</p>
     </footer>
+
     <script src="assets/js/script.js"></script>
 </body>
-<script>
-    fetch("header.html")
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById("header-placeholder").innerHTML = data;
-        })
-        .catch(err => console.error("Error loading header:", err));
-</script>
 
 </html>

@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Asset and Animation Manager</title>
-    <link id="theme-stylesheet" rel="stylesheet" href="/assets/css/style.css">    
+    <link rel="stylesheet" href="/assets/css/style.css">
 </head>
-<body class="aam-page">
-    <header>
-        <h1>Asset and Animation Manager</h1>
+
+<body class="subpage aam-page">
+    <header class="page-header">
+        <p class="eyebrow">Case study</p>
+        <h1>Animation Builder for Godot</h1>
+        <p class="page-lead">
+            A tool for helping artists and programmers collaborate more smoothly by turning animation setup into a
+            clearer, more visual workflow.
+        </p>
         <div id="header-placeholder"></div>
     </header>
 
-    <main>
+    <main class="page-shell">
         <section>
             <h2>Description &amp; Motivation</h2>
             <p>
                 My Asset and Animation Manager is a custom tool built in the Godot engine designed to simplify the process of importing, organizing, and animating game assets. 
-                Its primary goal is to give artists and non-programmers more control over how their assets appear and behave in-game, without needing to navigate Godot’s complex interface or rely on code. 
+                Its primary goal is to give artists and non-programmers more control over how their assets appear and behave in-game, without needing to navigate Godot's complex interface or rely on code. 
                 By bridging the gap between artist and programmer, the application promotes a smoother, more collaborative workflow.
             </p>
             <p>
@@ -110,9 +117,9 @@
                 Task completion became more consistent: all participants successfully completed all three tasks, and export actions in particular became very fast and direct.
             </p>
             <p>
-                Remaining issues appeared mostly at the “polish” level. 
+                Remaining issues appeared mostly at the "polish" level. 
                 Novice users sometimes still needed stronger guidance about what the preview window represented or where to start when dragging sprites. 
-                Participants suggested clearer section labels (for example “Frame Builder” and “Preview”), highlighting the currently selected frame, zoom controls, and small onboarding aids such as an introductory popup or a help icon.
+                Participants suggested clearer section labels (for example "Frame Builder" and "Preview"), highlighting the currently selected frame, zoom controls, and small onboarding aids such as an introductory popup or a help icon.
             </p>
         </section>
 
@@ -123,7 +130,7 @@
                 Early pain points around drag-and-drop, export behavior, and workflow visibility led to changes in layout, stronger visual cues, clearer tab naming, and a more structured build-versus-export separation.
             </p>
             <p>
-                By the second study, participants spent less time asking “How do I use this?” and more time suggesting enhancements such as keyboard shortcuts, better frame control, and advanced navigation features. 
+                By the second study, participants spent less time asking "How do I use this?" and more time suggesting enhancements such as keyboard shortcuts, better frame control, and advanced navigation features. 
                 This shift indicates that the core interaction model has become understandable, leaving room for the tool to grow into a more powerful production-ready system.
             </p>
         </section>
@@ -152,17 +159,10 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 John Gilbert</p>
+        <p class="footer-copy">&copy; <span id="footer-year">2026</span> John Gilbert. Thanks for exploring the project.</p>
     </footer>
 
     <script src="/assets/js/script.js"></script>
-    <script>
-        fetch("../../header.html")
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById("header-placeholder").innerHTML = data;
-            })
-            .catch(err => console.error("Error loading header:", err));
-    </script>
 </body>
+
 </html>

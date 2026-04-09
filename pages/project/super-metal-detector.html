@@ -1,47 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project/Hobby Title</title>
-    <link id="theme-stylesheet" rel="stylesheet" href="/assets/css/style.css">    
+    <meta name="description" content="Super Metal Detector is an exploration and rhythm game project by John Gilbert.">
+    <title>Super Metal Detector | John Gilbert</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
 </head>
-<body>
-    <header>
+
+<body class="subpage">
+    <header class="page-header">
+        <p class="eyebrow">Game project</p>
         <h1>Super Metal Detector</h1>
+        <p class="page-lead">
+            An indie exploration and rhythm game about beach bums, buried mysteries, and building something weird and
+            memorable with a longtime friend.
+        </p>
         <div id="header-placeholder"></div>
     </header>
 
-    <main>
+    <main class="page-shell">
         <section>
             <h2>About</h2>
-            <p>One of my oldests friends and I have always wanted to make a game together. He's a graphic designer and all around talented artist. I'm trying to be a decent game developer. He lives across the country now but we still try to find time to work on this game when we get a chance.</p>
+            <p>
+                One of my oldest friends and I have wanted to make a game together for years. He's a graphic designer
+                and a seriously talented artist, and I'm the one trying to turn the ideas into a playable world. We
+                live far apart now, but we still carve out time to keep building this project together.
+            </p>
         </section>
 
         <section>
-            <h2>Details</h2>
-            <p>Super Metal Detector is an exploration and rhythm game where you take on the role of a simple guy who likes to hunt for metallic objects on the beach. Meet the other beach bums, help 'em out if you can, and explore the depths of the beach caverns (yeah, there's caves under all that sand), and upgrade your metal detecting abilities.</p>
+            <h2>What it is</h2>
+            <p>
+                Super Metal Detector is an exploration and rhythm game where you play as a beach wanderer with a love
+                for finding strange metallic treasures. Along the way you meet other beach locals, help them out, and
+                venture into hidden caverns buried under the shoreline.
+            </p>
         </section>
 
         <section>
-            <h2>Preview</h2>
-            <p>To be real, we aren't far enough to demo something crazy interesting, but here's some of what we have so far. It's not much, but hey, it's something. Come back to check out our progress!</p>
-            <img src="/assets/gifs/super-metal-demo.gif" alt="Project Image" class="super-metal-gif">
+            <h2>Current progress</h2>
+            <p>
+                We're still early, so this is more proof-of-direction than polished vertical slice. Even so, the tone,
+                art direction, and core idea are all starting to take shape, and that's enough momentum to keep going.
+            </p>
+            <figure>
+                <img src="/assets/gifs/super-metal-demo.gif" alt="Gameplay preview of Super Metal Detector" class="super-metal-gif">
+            </figure>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 John Gilbert</p>
+        <p class="footer-copy">&copy; <span id="footer-year">2026</span> John Gilbert. More updates coming as the game grows.</p>
     </footer>
 
     <script src="/assets/js/script.js"></script>
 </body>
-<script>
-    fetch("../../header.html")
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById("header-placeholder").innerHTML = data;
-        })
-        .catch(err => console.error("Error loading header:", err));
-</script>
+
 </html>

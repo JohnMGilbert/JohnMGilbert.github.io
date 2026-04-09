@@ -4,68 +4,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects & Hobbies</title>
-    <link id="theme-stylesheet" rel="stylesheet" href="../assets/css/style.css">
+    <meta name="description" content="Selected software, game development, and research projects by John Gilbert.">
+    <title>Projects | John Gilbert</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
-<body>
-    <header>
-        <h1>Projects & Hobbies</h1>
+<body class="subpage">
+    <header class="page-header">
+        <p class="eyebrow">Selected work</p>
+        <h1>Projects and experiments with a practical core.</h1>
+        <p class="page-lead">
+            These projects sit at the intersection of software development, game design, and user-centered thinking.
+            I'm especially interested in work that helps people create, explore, or make better decisions.
+        </p>
         <div id="header-placeholder"></div>
     </header>
 
-    <main>
+    <main class="page-shell">
         <section>
-            <!-- <h2>Projects</h2> -->
+            <div class="section-heading">
+                <p class="eyebrow">Featured</p>
+                <h2>Current highlights</h2>
+                <p>
+                    A mix of creative tooling and game development, with an emphasis on collaboration, experimentation,
+                    and building systems that feel intuitive.
+                </p>
+            </div>
             <div class="project-list">
-
                 <article class="project-item">
-                    <img src="/assets/images/godot_icon.png" alt="HCC Project Image" class="project-img">
-                    <h3><a href="project/hcc.html">Animation Builder for Godot</a></h3>
-                    <p>Open source tool for improving collaboration between art designers and programmers.</p>
+                    <img src="/assets/images/godot_icon.png" alt="Godot icon representing animation builder" class="project-img">
+                    <div>
+                        <h3><a href="/pages/project/hcc.html">Animation Builder for Godot</a></h3>
+                        <p>
+                            A tool designed to give artists and non-programmers a friendlier path to importing assets,
+                            organizing them, and exporting complete animation packages into Godot.
+                        </p>
+                    </div>
+                    <ul class="chip-list" aria-label="Animation Builder tags">
+                        <li>Godot</li>
+                        <li>UX research</li>
+                        <li>Creative tools</li>
+                    </ul>
                 </article>
 
                 <article class="project-item">
-                    <img src="/assets/images/super-metal-icon.png" alt="Super Metal Detector" class="project-img">
-                    <h3><a href="project/super-metal-detector.html">Super Metal Detector</a></h3>
-                    <p>A video game project focused on exploration and discovery.</p>
+                    <img src="/assets/images/super-metal-icon.png" alt="Super Metal Detector project icon" class="project-img">
+                    <div>
+                        <h3><a href="/pages/project/super-metal-detector.html">Super Metal Detector</a></h3>
+                        <p>
+                            An exploration and rhythm game built with a longtime collaborator, focused on atmosphere,
+                            weird charm, and the joy of discovery.
+                        </p>
+                    </div>
+                    <ul class="chip-list" aria-label="Super Metal Detector tags">
+                        <li>Game development</li>
+                        <li>World building</li>
+                        <li>Indie collaboration</li>
+                    </ul>
                 </article>
-
-                <!-- <article class="project-item">
-                    <img src="/assets/images/multi-agent-logo.png" alt="Markov Decision Process" class="project-img">
-                    <h3><a href="project/seniorProj.html">Markov Decision Process</a></h3>
-                    <p>Sharing and redistributing rewards among multi-agent MDPs.</p>
-                </article> -->
             </div>
         </section>
 
-        <!-- <section>
-            <h2>Hobbies</h2>
-            <div class="hobby-list">
-                <article class="hobby-item">
-                    <img src="/assets/images/loaf.png" alt="Sourdough Bread Making" class="hobby-img">
-                    <h3><a href="project/baking.html">Sourdough Bread Making</a></h3>
-                    <p>Exploring the art of fermentation and crafting the perfect loaf.</p>
+        <section>
+            <div class="section-heading">
+                <p class="eyebrow">Working style</p>
+                <h2>What ties the work together</h2>
+            </div>
+            <div class="feature-grid">
+                <article class="feature-card">
+                    <strong>Collaboration-first</strong>
+                    <p>
+                        I gravitate toward systems that make it easier for artists, teammates, and users to understand
+                        what the software is doing.
+                    </p>
+                </article>
+                <article class="feature-card">
+                    <strong>Research-informed</strong>
+                    <p>
+                        I like pairing experiments with user feedback so the final product improves for real reasons,
+                        not just aesthetic ones.
+                    </p>
                 </article>
             </div>
-        </section> -->
+        </section>
     </main>
 
-    <!-- <button id="dark-mode-toggle">Toggle Dark Mode</button> -->
-
     <footer>
-        <p>&copy; 2025 Your Name</p>
+        <p class="footer-copy">&copy; <span id="footer-year">2026</span> John Gilbert. More projects on the way.</p>
     </footer>
 
     <script src="/assets/js/script.js"></script>
 </body>
-<script>
-    fetch("../header.html")
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById("header-placeholder").innerHTML = data;
-        })
-        .catch(err => console.error("Error loading header:", err));
-</script>
 
 </html>

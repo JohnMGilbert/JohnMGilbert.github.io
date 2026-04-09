@@ -1,56 +1,82 @@
 <!DOCTYPE html>
-<html lang-="en">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Me</title>
-    <link id="theme-stylesheet" rel="stylesheet" href="../assets/css/style.css">
+    <meta name="description" content="Contact John Gilbert about software development, projects, and collaboration.">
+    <title>Contact | John Gilbert</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
-<body>
-    <header>
-        <h1>Contact Me</h1>
+<body class="subpage">
+    <header class="page-header">
+        <p class="eyebrow">Let's connect</p>
+        <h1>Open to thoughtful projects and good conversations.</h1>
+        <p class="page-lead">
+            If you'd like to talk about software development, game projects, collaboration, or opportunities, email is
+            the best place to start.
+        </p>
         <div id="header-placeholder"></div>
     </header>
 
-    <main>
+    <main class="page-shell">
         <section>
-            <h2>Get in Touch</h2>
-            <p>If you'd like to get in touch, contact me via email at jmgilbert23@gmail.com, or fill out the form below.
-            </p>
+            <div class="section-heading">
+                <p class="eyebrow">Contact options</p>
+                <h2>Reach out directly or send a quick note.</h2>
+            </div>
+            <div class="contact-grid">
+                <article class="contact-card">
+                    <h3>Email</h3>
+                    <p>The fastest way to reach me for collaboration or questions.</p>
+                    <p><a href="mailto:jmgilbert23@gmail.com">jmgilbert23@gmail.com</a></p>
+                </article>
+                <article class="contact-card">
+                    <h3>What to include</h3>
+                    <p>
+                        A little context about your project, what kind of help you need, and any timeline you already
+                        have in mind.
+                    </p>
+                </article>
+            </div>
         </section>
 
         <section>
+            <div class="section-heading">
+                <p class="eyebrow">Quick message</p>
+                <h2>Send an email from your preferred mail app.</h2>
+                <p>
+                    This form uses your device's default email client, which keeps things simple and ensures I get the
+                    message directly from you.
+                </p>
+            </div>
             <form action="mailto:jmgilbert23@gmail.com" method="post" enctype="text/plain">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+                <label for="name">
+                    Name
+                    <input type="text" id="name" name="name" required>
+                </label>
 
-                <label for="email">Email:</label>
-                <input type="text" id="email" name="email" required>
+                <label for="email">
+                    Email
+                    <input type="email" id="email" name="email" required>
+                </label>
 
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
+                <label for="message">
+                    Message
+                    <textarea id="message" name="message" rows="6" required></textarea>
+                </label>
 
-                <button type="submit">Send</button>
+                <button type="submit">Open email draft</button>
             </form>
         </section>
     </main>
 
-    <!-- <button id="dark-mode-toggle">Toggle Dark Mode</button>
-        <footer> -->
-    <p>&copy; 2025 John Gilbert</p>
+    <footer>
+        <p class="footer-copy">&copy; <span id="footer-year">2026</span> John Gilbert. Thanks for stopping by.</p>
     </footer>
-    <script src="/assets/js/script.js"></script>
 
+    <script src="/assets/js/script.js"></script>
 </body>
-<script>
-    fetch("../header.html")
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById("header-placeholder").innerHTML = data;
-        })
-        .catch(err => console.error("Error loading header:", err));
-</script>
 
 </html>

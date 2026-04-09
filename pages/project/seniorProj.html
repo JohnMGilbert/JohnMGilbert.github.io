@@ -1,40 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project/Hobby Title</title>
-    <link id="theme-stylesheet" rel="stylesheet" href="/assets/css/style.css">
+    <title>Food Waste Reducer AI | John Gilbert</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
 </head>
-<body>
-    <header>
+
+<body class="subpage">
+    <header class="page-header">
+        <p class="eyebrow">Research project</p>
         <h1>Food Waste Reducer AI</h1>
-        <nav>
-            <ul>
-                <li><a href="../../index.html">Home</a></li>
-                <li><a href="../projects.html">Projects & Hobbies</a></li>
-                <li><a href="../contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        <p class="page-lead">
+            A proof-of-concept project exploring how decentralized decision systems can reduce food waste while
+            respecting realistic household habits.
+        </p>
+        <div id="header-placeholder"></div>
     </header>
 
-    <main>
+    <main class="page-shell">
         <section>
-            <h2>Perishable Food Reduction Application</h2>
-            <p>The goal of this project is to develop the backend for an application that minimizes perishable food waste and cost while allowing for individual diet habits to be realistically maintained. Most food management applications don't consider food waste, and make the assumption that foods purchases will always be used. Instead, I aim to target a user space where people don't want to ahere to a food plan, and instead learn from a user's trends.</p>
-            <h2>Cooperative Reward Sharing in Decentralized MDPs</h2>
-            <p>Markov Decision Processes (MDPs) are expensive, so monitoring the state of each perishable item takes a lot of time as a pantry grows in size. In my implementation, each item in the pantry is represented by its own MDP. At the reward step, it aggrigates the reward of all MDPs and then redistributes a modified reward back to the MDPs based on the shared outcome.</p>
-            <img src="/assets/images/MDP-rewards.png" class="graph">
-            <p>The above graph shows how my method combined with MCTS can reduce food waste. I ran multiple simulations.<p>
-            <p>Ultimately, this project is a proof of concept for my MDP rewards sharing. I'm currently working on other implementations of this method.</p>        
+            <h2>Perishable food reduction</h2>
+            <p>
+                The goal of this project is to develop backend logic for an application that minimizes perishable food
+                waste and cost while still allowing users to maintain realistic diet habits. Many food management tools
+                assume that purchases are always used exactly as planned, but real life rarely works that neatly.
+            </p>
         </section>
 
+        <section>
+            <h2>Cooperative reward sharing in decentralized MDPs</h2>
+            <p>
+                Markov Decision Processes are computationally expensive, especially as a pantry grows in size. In this
+                implementation, each perishable item is represented by its own MDP. At reward time, the system
+                aggregates outcomes across all item-level models and redistributes a modified reward based on the
+                shared result.
+            </p>
+            <figure>
+                <img src="/assets/images/MDP-rewards.png" alt="Graph of MDP reward sharing results" class="graph">
+            </figure>
+            <p>
+                The graph above shows how this reward-sharing method, combined with MCTS, can reduce food waste across
+                repeated simulations.
+            </p>
+        </section>
+
+        <section>
+            <h2>Where it stands</h2>
+            <p>
+                This project is currently a proof of concept for the reward-sharing approach. I'm interested in
+                exploring additional implementations and seeing how the idea performs in more realistic planning
+                environments.
+            </p>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 John Gilbert</p>
+        <p class="footer-copy">&copy; <span id="footer-year">2026</span> John Gilbert. Research projects like this continue to shape my approach.</p>
     </footer>
 
     <script src="/assets/js/script.js"></script>
 </body>
+
 </html>
