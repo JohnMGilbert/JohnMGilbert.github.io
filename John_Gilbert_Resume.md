@@ -7,19 +7,19 @@ Las Cruces, New Mexico
 
 ## Professional Summary
 
-Software developer and computer science master's student building full-stack applications, creative tools, and game systems. Brings a practical background in AI evaluation, user-centered design, and cross-disciplinary collaboration, with a strong interest in software that helps people create and explore.
+Software developer and computer science master's student building full-stack applications, data-driven tools, and machine learning workflows. Brings a practical background in AI evaluation, analytical problem-solving, and cross-disciplinary collaboration, with a strong interest in software engineering and technical systems.
 
 ## Technical Skills
 
-- Languages: Python, JavaScript, C, C++, GDScript, HTML, CSS
-- Tools and Platforms: Godot, Git, JSON, Web UI prototyping
-- Focus Areas: Full-stack development, game development, AI data evaluation
-- Methods: User research, iterative prototyping, workflow design, content moderation
+- Languages: Python, JavaScript, C, C++, HTML, CSS
+- Tools and Platforms: Pandas, Polars, scikit-learn, NetworkX, Git, JSON
+- Focus Areas: Full-stack development, machine learning, data analysis
+- Methods: Feature engineering, model evaluation, workflow design, content moderation
 
 ## Selected Projects
 
 ### Animation Builder for Godot
-- Built a Godot-based asset and animation management tool to help artists and non-programmers create game-ready animations with a clearer visual workflow.
+- Built a Godot-based asset and animation management tool to help artists and non-programmers work with imported assets through a clearer visual workflow.
 - Implemented drag-and-drop importing, metadata organization, timeline-based frame sequencing, audio synchronization, and JSON export for downstream Godot integration.
 - Ran two rounds of user studies with six participants each and used the feedback to improve layout clarity, export understanding, and task completion consistency.
 
@@ -28,9 +28,10 @@ Software developer and computer science master's student building full-stack app
 - Explored reward sharing across item-level Markov Decision Processes combined with Monte Carlo Tree Search to model realistic pantry planning behavior.
 - Used repeated simulation results to evaluate how shared rewards could lower waste while preserving practical household constraints.
 
-### Super Metal Detector
-- Co-developed an exploration and rhythm game with a longtime creative collaborator, translating ideas into playable systems and world-building prototypes.
-- Contributed gameplay direction, technical implementation, and iterative development support as the project moves from concept toward a stronger vertical slice.
+### Network Traffic Analysis
+- Built a reproducible Python analysis pipeline for the FLNET2023 dataset covering router-topology reconstruction, unsupervised attack discovery, and supervised intrusion classification.
+- Processed large router-flow datasets with Pandas, Polars, and PyArrow; engineered network-behavior features; and evaluated clustering workflows with UMAP, HDBSCAN, MiniBatchKMeans, and Gaussian Mixture models.
+- Trained and evaluated multi-class intrusion-detection models with scikit-learn and imbalance-handling strategies; the Random Forest baseline reached 93.1% accuracy and 0.845 macro F1 on the labeled evaluation corpus.
 
 ## Experience
 
