@@ -1,0 +1,166 @@
+@page {
+    size: letter;
+    margin: 0.5in;
+}
+
+:root {
+    --text: #111827;
+    --muted: #4b5563;
+    --line: #d1d5db;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 11pt;
+}
+
+body {
+    margin: 0;
+    background: #f3f4f6;
+    color: var(--text);
+    font-family: "Georgia", "Times New Roman", serif;
+    line-height: 1.35;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.sheet {
+    width: min(8.5in, 100%);
+    margin: 24px auto;
+    background: #fff;
+    padding: 0.55in;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.header {
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 0.16in;
+    padding-bottom: 0.14in;
+}
+
+.header h1 {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 1.9rem;
+    letter-spacing: 0.02em;
+    line-height: 1.05;
+    margin: 0 0 0.04in;
+    text-transform: uppercase;
+}
+
+.headline {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin: 0 0 0.04in;
+}
+
+.contact-line {
+    color: var(--muted);
+    font-size: 0.92rem;
+    margin: 0 0 0.08in;
+}
+
+.summary {
+    margin: 0;
+}
+
+.section {
+    margin-top: 0.14in;
+}
+
+.section h2 {
+    border-bottom: 1px solid var(--line);
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.92rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    margin: 0 0 0.08in;
+    padding-bottom: 0.03in;
+    text-transform: uppercase;
+}
+
+.skill-list p,
+.detail {
+    margin: 0 0 0.05in;
+}
+
+.entry {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    margin-bottom: 0.12in;
+}
+
+.entry:last-child {
+    margin-bottom: 0;
+}
+
+.entry-header {
+    align-items: baseline;
+    display: grid;
+    gap: 0.14in;
+    grid-template-columns: minmax(0, 1fr) auto;
+    margin-bottom: 0.04in;
+}
+
+.entry h3 {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.subhead,
+.meta,
+.detail,
+.contact-line {
+    color: var(--muted);
+}
+
+.subhead,
+.meta {
+    margin: 0;
+}
+
+ul {
+    margin: 0.03in 0 0.08in;
+    padding-left: 0.22in;
+}
+
+li {
+    margin: 0 0 0.03in;
+}
+
+@media (max-width: 800px) {
+    .sheet {
+        margin: 0;
+        padding: 20px;
+        width: 100%;
+    }
+
+    .entry-header {
+        grid-template-columns: 1fr;
+        gap: 4px;
+    }
+
+    .contact-line {
+        line-height: 1.5;
+    }
+}
+
+@media print {
+    body {
+        background: #fff;
+    }
+
+    .sheet {
+        box-shadow: none;
+        margin: 0;
+        padding: 0;
+        width: auto;
+    }
+}

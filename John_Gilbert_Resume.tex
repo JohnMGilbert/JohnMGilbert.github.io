@@ -1,0 +1,99 @@
+\documentclass[11pt]{article}
+
+\usepackage[letterpaper,margin=0.6in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.25em}
+\setlist[itemize]{leftmargin=1.2em, itemsep=0.2em, topsep=0.25em}
+\titleformat{\section}{\large\bfseries}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{0.6em}{0.35em}
+
+\newcommand{\resumeentry}[4]{
+  \textbf{#1} \hfill #2 \\
+  \textit{#3}%
+  \if\relax\detokenize{#4}\relax
+  \else
+    \hfill \textit{#4}%
+  \fi
+}
+
+\begin{document}
+
+\begin{center}
+  {\LARGE \textbf{John Gilbert}} \\
+  \vspace{0.2em}
+  Software Developer \\
+  \vspace{0.2em}
+  Las Cruces, New Mexico \textbar\ 
+  \href{tel:15754053364}{575-405-3364} \textbar\ 
+  \href{mailto:jmgilbert23@gmail.com}{jmgilbert23@gmail.com} \textbar\ 
+  \href{https://johnmgilbert.github.io}{johnmgilbert.github.io}
+\end{center}
+
+Software developer and computer science master's student building full-stack applications, data-driven tools, and technical analysis workflows. Brings a practical background in AI evaluation, analytical problem-solving, and cross-disciplinary collaboration, with a strong interest in software engineering and technical systems.
+
+\section*{Technical Skills}
+\textbf{Languages:} Python, JavaScript, C, C++, HTML, CSS \\
+\textbf{Tools \& Platforms:} Pandas, Polars, NetworkX, Git, JSON \\
+\textbf{Focus Areas:} Full-stack development, network analysis, data analysis \\
+\textbf{Methods:} Feature engineering, model evaluation, workflow design, content moderation
+
+\section*{Selected Projects}
+\resumeentry{Animation Builder for Godot}{\href{https://johnmgilbert.github.io/pages/project/hcc.html}{Project page}}{Workflow tooling project}{}
+\begin{itemize}
+  \item Built a Godot-based asset and animation management tool to help artists and non-programmers work with imported assets through a clearer visual workflow.
+  \item Implemented drag-and-drop importing, metadata organization, timeline-based frame sequencing, audio synchronization, and JSON export for downstream Godot integration.
+  \item Ran two rounds of user studies with six participants each and used the feedback to improve layout clarity, export understanding, and task completion consistency.
+\end{itemize}
+
+\resumeentry{Food Waste Reducer AI}{\href{https://johnmgilbert.github.io/pages/project/seniorProj.html}{Project page}}{Research project}{}
+\begin{itemize}
+  \item Developed a proof-of-concept approach for reducing household perishable food waste through decentralized decision systems.
+  \item Explored reward sharing across item-level Markov Decision Processes combined with Monte Carlo Tree Search to model realistic pantry planning behavior.
+  \item Used repeated simulation results to evaluate how shared rewards could lower waste while preserving practical household constraints.
+\end{itemize}
+
+\resumeentry{Network Traffic Analysis}{Python, data analysis, NetworkX}{Network analysis and intrusion detection project}{}
+\begin{itemize}
+  \item Built a reproducible Python analysis pipeline for the FLNET2023 dataset covering router-topology reconstruction, unsupervised attack discovery, and supervised intrusion classification.
+  \item Processed large router-flow datasets with Pandas, Polars, and PyArrow; engineered network-behavior features; and evaluated clustering workflows with UMAP, HDBSCAN, MiniBatchKMeans, and Gaussian Mixture models.
+  \item Trained and evaluated multi-class intrusion-detection models with imbalance-handling strategies.
+\end{itemize}
+
+\section*{Experience}
+\resumeentry{TELUS International}{Aug 2022 -- Present}{Internet Safety Evaluator}{Remote}
+\begin{itemize}
+  \item Evaluate online content against safety and quality guidelines to support moderation, trust and safety, and AI-related data workflows.
+  \item Apply consistent judgment in high-volume review environments where policies and edge cases change over time.
+  \item Strengthen analytical accuracy and attention to detail through independent review, policy interpretation, and documentation-focused work.
+\end{itemize}
+
+\resumeentry{Freelance Contractor}{Jan 2023 -- Present}{Residential projects}{Las Cruces, NM}
+\begin{itemize}
+  \item Manage small client projects including home repairs, renovation support, landscaping, and general handyman work.
+  \item Coordinate project scope, materials, scheduling, and execution while working independently and maintaining client trust.
+  \item Bring practical problem-solving, adaptability, and craftsmanship to projects with changing requirements and real-world constraints.
+\end{itemize}
+
+\resumeentry{Bakehouse LLC}{Jan 2013 -- Jun 2018}{Person in Charge}{Las Cruces, NM}
+\begin{itemize}
+  \item Oversaw daily bakery operations, food preparation, and catering support in a fast-paced production environment.
+  \item Supervised employees, helped coordinate workflow, and maintained quality and consistency under deadline-driven conditions.
+  \item Built leadership, training, and communication skills that continue to shape a calm and reliable approach to team-based work.
+\end{itemize}
+
+\section*{Education}
+\resumeentry{New Mexico State University}{Aug 2024 -- Expected May 2026}{M.S. in Computer Science}{}
+Current GPA: 3.9
+
+\resumeentry{New Mexico State University}{Aug 2021 -- May 2024}{B.S. in Computer Science}{}
+GPA: 3.9
+
+\end{document}

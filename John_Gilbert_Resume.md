@@ -7,13 +7,13 @@ Las Cruces, New Mexico
 
 ## Professional Summary
 
-Software developer and computer science master's student building full-stack applications, data-driven tools, and machine learning workflows. Brings a practical background in AI evaluation, analytical problem-solving, and cross-disciplinary collaboration, with a strong interest in software engineering and technical systems.
+Software developer and computer science master's student building full-stack applications, data-driven tools, and technical analysis workflows. Brings a practical background in AI evaluation, analytical problem-solving, and cross-disciplinary collaboration, with a strong interest in software engineering and technical systems.
 
 ## Technical Skills
 
 - Languages: Python, JavaScript, C, C++, HTML, CSS
-- Tools and Platforms: Pandas, Polars, scikit-learn, NetworkX, Git, JSON
-- Focus Areas: Full-stack development, machine learning, data analysis
+- Tools and Platforms: Pandas, Polars, NetworkX, Git, JSON
+- Focus Areas: Full-stack development, network analysis, data analysis
 - Methods: Feature engineering, model evaluation, workflow design, content moderation
 
 ## Selected Projects
@@ -31,7 +31,7 @@ Software developer and computer science master's student building full-stack app
 ### Network Traffic Analysis
 - Built a reproducible Python analysis pipeline for the FLNET2023 dataset covering router-topology reconstruction, unsupervised attack discovery, and supervised intrusion classification.
 - Processed large router-flow datasets with Pandas, Polars, and PyArrow; engineered network-behavior features; and evaluated clustering workflows with UMAP, HDBSCAN, MiniBatchKMeans, and Gaussian Mixture models.
-- Trained and evaluated multi-class intrusion-detection models with scikit-learn and imbalance-handling strategies; the Random Forest baseline reached 93.1% accuracy and 0.845 macro F1 on the labeled evaluation corpus.
+- Trained and evaluated multi-class intrusion-detection models with imbalance-handling strategies; the Random Forest baseline reached 93.1% accuracy and 0.845 macro F1 on the labeled evaluation corpus.
 
 ## Experience
 
