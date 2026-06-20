@@ -1,11 +1,12 @@
 :root {
-    --page-bg: #eef2f7;
+    --page-bg: #f8f7f1;
     --sheet-bg: #ffffff;
-    --text: #1f2933;
-    --muted: #5b6777;
-    --line: #d7dee7;
-    --accent: #1d5f8c;
-    --accent-soft: #edf5fb;
+    --text: #171a17;
+    --muted: #5d655d;
+    --line: #d8ded2;
+    --line-strong: rgba(23, 26, 23, 0.42);
+    --accent: #2f6f57;
+    --accent-soft: #e9ece3;
 }
 
 * {
@@ -20,7 +21,7 @@ html {
 
 body {
     min-height: 100%;
-    background: linear-gradient(180deg, #f5f7fa 0%, var(--page-bg) 100%);
+    background: linear-gradient(180deg, #fbfaf5 0%, var(--page-bg) 100%);
     color: var(--text);
     font-family: "Aptos", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
     line-height: 1.55;
@@ -41,9 +42,8 @@ a:focus-visible {
     max-width: 900px;
     margin: 0 auto;
     background: var(--sheet-bg);
-    border: 1px solid rgba(29, 95, 140, 0.12);
-    border-radius: 20px;
-    box-shadow: 0 24px 60px rgba(21, 34, 50, 0.08);
+    border-top: 2px solid var(--line-strong);
+    border-bottom: 1px solid var(--line);
     padding: 40px;
 }
 
@@ -104,10 +104,8 @@ a:focus-visible {
 }
 
 .skills-grid p {
-    background: var(--accent-soft);
-    border: 1px solid rgba(29, 95, 140, 0.12);
-    border-radius: 14px;
-    padding: 14px 16px;
+    border-top: 1px solid var(--line);
+    padding: 14px 0 0;
 }
 
 .entry + .entry {
@@ -148,7 +146,6 @@ a:focus-visible {
 @media (max-width: 760px) {
     .resume {
         padding: 24px;
-        border-radius: 16px;
     }
 
     .resume-header,
@@ -171,8 +168,6 @@ a:focus-visible {
     .resume {
         max-width: none;
         border: none;
-        border-radius: 0;
-        box-shadow: none;
         margin: 0;
         padding: 0;
     }
